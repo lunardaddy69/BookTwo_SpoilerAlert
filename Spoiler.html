@@ -1,0 +1,92 @@
+<div class="mariana-spoiler-wrapper">
+  <div class="mariana-spoiler-block">
+    <div class="mariana-spoiler-overlay">
+      <div class="overlay-text">
+        <span>Book Two Synopsis Contains Spoilers for Book One</span><br>
+        <span class="reveal-line">Click to Reveal</span>
+      </div>
+    </div>
+
+    <div class="mariana-spoiler-text">
+      <p><strong>It’s been a year since Mariana found the boots of Butch Cassidy.<br>
+      A year since Miss Murphy threatened to destroy the Museum of Human History.<br>
+      A year since Mr. Steel forced them all into hiding—and Mariana is bored.</strong></p>
+
+      <p>But when Mr. Steel finally allows Mariana and the ghost of Benjamin Franklin out of the museum to hunt for another powerful artifact, things couldn’t go more wrong. The artifact’s Legend proves hostile, and in the chaos, Mariana is kidnapped by Miss Murphy!</p>
+
+      <p>Stuck in enemy territory—even with surprisingly pleasant captors—Mariana decides not to wait around for whatever Miss Murphy wants with her. Driven by a need for escape, Mariana intercepts a mysterious distress call—but is this broadcast truly from a woman who needs her help, or is it a trap set by one of Mr. Steel’s enemies?</p>
+
+      <p>In this sequel to <em>The Secret Fate of Butch Cassidy</em>, Mariana, together with her best friend, Benjamin Franklin, must walk a treacherous path that will not only put her at risk of death but will reveal truths about her past she’s not sure she wants to know. Truths that, once revealed, may tie her fate forever to the mystery of Mr. Steel and Miss Murphy, and even the future of humanity itself.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.mariana-spoiler-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.mariana-spoiler-block {
+  position: relative;
+  cursor: pointer;
+}
+
+.mariana-spoiler-text {
+  filter: blur(6px);
+  color: hsla(43, 100%, 90%, 0.8);
+  opacity: 0.7;
+  transition: filter 0.5s ease, opacity 0.5s ease, color 0.5s ease;
+}
+
+/* Reveal state */
+.mariana-spoiler-block.revealed .mariana-spoiler-text {
+  filter: none;
+  opacity: 1;
+  color: hsla(43, 0%, 100%, 0.9);
+}
+
+.mariana-spoiler-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mariana-spoiler-block:not(.revealed):hover .mariana-spoiler-overlay {
+  opacity: 1;
+}
+
+.mariana-spoiler-block.revealed .mariana-spoiler-overlay {
+  display: none;
+}
+
+/* Style the second line */
+.overlay-text .reveal-line {
+  display: block;
+  margin-top: 0.6em;
+  font-weight: 600;
+  font-size: 0.95em;
+  color: hsla(43, 100%, 90%, 0.9);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.mariana-spoiler-block').forEach(block => {
+    block.addEventListener('click', () => {
+      block.classList.add('revealed');
+    });
+  });
+});
+</script>
