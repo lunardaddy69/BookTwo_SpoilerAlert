@@ -1,16 +1,11 @@
-Here’s a clean, Markdown-formatted README.md that will look great directly on your GitHub repository page for this feature.
-It’s concise, readable, and explains the structure without dumping code.
-
-⸻
-
-Mariana Book Two Spoiler Reveal Block
+**Mariana Book Two Spoiler Reveal Block**
 
 This feature adds an interactive spoiler-protected synopsis section for Mariana Book Two on the author’s website.
 It hides the text behind a blurred overlay until the visitor clicks to reveal it.
 
 ⸻
 
-✨ Features
+✨ **Features**
 	•	Blurred preview: The synopsis text is visible but unreadable until revealed.
 	•	Hover overlay: Displays a dark overlay with a message warning of spoilers.
 	•	Click to reveal: Removes the blur and overlay, revealing the text in the site’s normal font and color.
@@ -19,7 +14,7 @@ It hides the text behind a blurred overlay until the visitor clicks to reveal it
 
 ⸻
 
-🧩 Structure Overview
+🧩 **Structure Overview**
 	•	HTML:
   	•	A wrapper <div> contains the spoiler block.
   	•	Inside are two layers:
@@ -34,7 +29,7 @@ It hides the text behind a blurred overlay until the visitor clicks to reveal it
 
 ⸻
 
-🛠️ Usage
+🛠️ **Usage**
 	1.	Copy the entire code snippet from this repository.
 	2.	Paste it into a Squarespace Code Block (or any HTML page).
 	3.	Adjust the synopsis text, colors, or blur intensity if needed.
@@ -43,7 +38,7 @@ It hides the text behind a blurred overlay until the visitor clicks to reveal it
 
 ⸻
 
-🎨 Customization Tips
+🎨 **Customization Tips**
 	•	To change the brightness of the hidden text, edit the color property in:
       .mariana-spoiler-text {
         color: hsla(43, 100%, 90%, 0.8);
